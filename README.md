@@ -98,86 +98,111 @@ Ensure you have the following installed:
   - Node 4: [http://127.0.0.1:9656](http://127.0.0.1:9656)
   - Node 5: [http://127.0.0.1:9658](http://127.0.0.1:9658)
 
-Overview
-The DefiUniversalSports smart contract is a decentralized finance (DeFi) application built on the Ethereum blockchain. It allows users to participate in a sporting event by purchasing tickets with Ether (ETH) and rewards a randomly selected champion with tokens. The contract integrates an ERC20 token and a bank contract for managing deposits and withdrawals.
+Here's a sample README for your `DefiUniversalSports` smart contract, providing an overview of the project, its functionality, and instructions on how to use it.
 
-Features
-ERC20 Token Integration: The contract creates an ERC20 token called DEFIUNIVERSE (DUE) for reward distribution.
-Banking Functionality: Users can deposit tokens into a bank and withdraw them with interest.
-Event Management: The contract allows the manager to start events, buy tickets, and select champions.
-Random Champion Selection: A pseudo-random number generator determines the champion among participants.
-Interest on Deposits: Users earn a 10% interest on their deposited amount when they withdraw.
-Contract Structure
-Variables
-manager: Address of the contract manager.
-participants: Array of participant addresses.
-eventEndTime: Timestamp for when the event ends.
-ticketPrice: Price of the event ticket in wei.
-eventClosed: Flag indicating if the event is closed.
-champion: Address of the winning participant.
-Functions
-Constructor
+---
 
-Initializes the contract, creating an ERC20 token and a bank instance.
-depositInBank(uint _tokenAmount)
+# DefiUniversalSports Smart Contract
 
-Deposits tokens into the bank.
-withdrawFromBank()
+## Overview
 
-Withdraws tokens with interest from the bank.
-getBankBalance()
+The `DefiUniversalSports` smart contract is a decentralized finance (DeFi) application built on the Ethereum blockchain. It allows users to participate in a sporting event by purchasing tickets with Ether (ETH) and rewards a randomly selected champion with tokens. The contract integrates an ERC20 token and a bank contract for managing deposits and withdrawals.
 
-Returns the user's bank balance.
-transferToOther(address _address, uint _amount)
+## Features
 
-Transfers tokens to another address.
-mint(uint _tokenAmount)
+- **ERC20 Token Integration**: The contract creates an ERC20 token called **DEFIUNIVERSE (DUE)** for reward distribution.
+- **Banking Functionality**: Users can deposit tokens into a bank and withdraw them with interest.
+- **Event Management**: The contract allows the manager to start events, buy tickets, and select champions.
+- **Random Champion Selection**: A pseudo-random number generator determines the champion among participants.
+- **Interest on Deposits**: Users earn a 10% interest on their deposited amount when they withdraw.
 
-Mints new tokens to the caller's address.
-checkBalance()
+## Contract Structure
 
-Returns the caller's token balance.
-machineRandomNumber()
+### Variables
+- `manager`: Address of the contract manager.
+- `participants`: Array of participant addresses.
+- `eventEndTime`: Timestamp for when the event ends.
+- `ticketPrice`: Price of the event ticket in wei.
+- `eventClosed`: Flag indicating if the event is closed.
+- `champion`: Address of the winning participant.
 
-Generates a pseudo-random number for champion selection.
-burnTokens(uint _tokenAmount)
+### Functions
 
-Burns the specified amount of tokens from the caller's address.
-startEvent(uint _durationMin, uint _ticketWei)
+1. **Constructor**
+   - Initializes the contract, creating an ERC20 token and a bank instance.
 
-Starts a new event with a specified duration and ticket price.
-buyEventTicket()
+2. **depositInBank(uint _tokenAmount)**
+   - Deposits tokens into the bank.
 
-Allows participants to buy tickets for the event.
-pickChampion()
+3. **withdrawFromBank()**
+   - Withdraws tokens with interest from the bank.
 
-Randomly selects a champion after the event ends.
-getParticipants()
+4. **getBankBalance()**
+   - Returns the user's bank balance.
 
-Returns the list of participants.
-timeLeft()
+5. **transferToOther(address _address, uint _amount)**
+   - Transfers tokens to another address.
 
-Returns the remaining time until the event ends.
-Modifiers
-onlyManager: Restricts function access to the manager only.
-Usage
-Deploy the Contract
+6. **mint(uint _tokenAmount)**
+   - Mints new tokens to the caller's address.
 
-Deploy the DefiUniversalSports contract on the Ethereum network.
-Token Management
+7. **checkBalance()**
+   - Returns the caller's token balance.
 
-Use depositInBank to deposit tokens.
-Call withdrawFromBank to withdraw tokens along with interest.
-Event Participation
+8. **machineRandomNumber()**
+   - Generates a pseudo-random number for champion selection.
 
-Call startEvent to initialize an event.
-Participants can use buyEventTicket to purchase tickets.
-Champion Selection
+9. **burnTokens(uint _tokenAmount)**
+   - Burns the specified amount of tokens from the caller's address.
 
-After the event duration, the manager can call pickChampion to select a winner.
-Requirements
-Solidity version: 0.8.26
-Requires the ERC20 and Vault contracts to be imported.
-License
+10. **startEvent(uint _durationMin, uint _ticketWei)**
+    - Starts a new event with a specified duration and ticket price.
+
+11. **buyEventTicket()**
+    - Allows participants to buy tickets for the event.
+
+12. **pickChampion()**
+    - Randomly selects a champion after the event ends.
+
+13. **getParticipants()**
+    - Returns the list of participants.
+
+14. **timeLeft()**
+    - Returns the remaining time until the event ends.
+
+### Modifiers
+
+- **onlyManager**: Restricts function access to the manager only.
+
+## Usage
+
+1. **Deploy the Contract**
+   - Deploy the `DefiUniversalSports` contract on the Ethereum network.
+
+2. **Token Management**
+   - Use `depositInBank` to deposit tokens.
+   - Call `withdrawFromBank` to withdraw tokens along with interest.
+
+3. **Event Participation**
+   - Call `startEvent` to initialize an event.
+   - Participants can use `buyEventTicket` to purchase tickets.
+
+4. **Champion Selection**
+   - After the event duration, the manager can call `pickChampion` to select a winner.
+
+## Requirements
+
+- Solidity version: 0.8.26
+- Requires the `ERC20` and `Vault` contracts to be imported.
+
+## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
-Feel free to add any additional sections or modify existing ones to better fit your project's needs!
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or features.
+
+---
+
+Feel free to modify the README to better suit your project or add any additional sections you find necessary!
