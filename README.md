@@ -1,6 +1,4 @@
-Here's a README template based on the commands you ran on Ubuntu and the setup of your Avalanche blockchain. You can customize it further as needed.
 
----
 
 # Avalanche Subnet Setup
 
@@ -98,9 +96,7 @@ Ensure you have the following installed:
   - Node 4: [http://127.0.0.1:9656](http://127.0.0.1:9656)
   - Node 5: [http://127.0.0.1:9658](http://127.0.0.1:9658)
 
-Here's a sample README for your `DefiUniversalSports` smart contract, providing an overview of the project, its functionality, and instructions on how to use it.
-
----
+## NoW code explantion
 
 # DefiUniversalSports Smart Contract
 
@@ -205,4 +201,5 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ---
 
-Feel free to modify the README to better suit your project or add any additional sections you find necessary!
+## Video Explanation
+https://www.loom.com/share/6db1d402cacd4d6384ec729f7ce5b5aa?sid=ff00d649-e5c7-4839-ab03-27a8632363fe
